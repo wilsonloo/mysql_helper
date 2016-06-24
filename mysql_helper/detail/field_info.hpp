@@ -24,6 +24,8 @@ namespace evl
 				: mysql_field_(mysql_field)
 			{}
 
+            virtual ~FieldInfo(){ mysql_field_ = NULL; }
+
 			// 经转换字符串到实际长度
 			virtual evl::def::uint32 get_real_max_length()const = 0;
 

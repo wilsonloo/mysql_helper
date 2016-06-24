@@ -160,7 +160,7 @@ namespace evl
 					// 获取列信息
 					MYSQL_FIELD* field = NULL;
 					std::vector<FieldInfoSharedPtr> field_infos;
-					while (field = mysql_fetch_field(res))
+					while ((field = mysql_fetch_field(res)) != NULL)
 					{
 						FieldInfoSharedPtr field_info = ParseField(field);
 						if (field_info.get() == NULL)
@@ -205,7 +205,7 @@ namespace evl
 
 				// 逐行存储数据
 				MYSQL_ROW row;
-				while (row = mysql_fetch_row(res))
+				while ((row = mysql_fetch_row(res)) != NULL )
 				{
 					StoreRowData(row, field_infos, total_max_feild_len, result_data);
 				}
