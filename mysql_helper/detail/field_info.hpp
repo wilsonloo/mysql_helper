@@ -1,9 +1,9 @@
 #ifndef EVL_ENGINE_DB_MYSQL_FIELD_INFO_HPP_
 #define EVL_ENGINE_DB_MYSQL_FIELD_INFO_HPP_
 
-#ifdef _PF_WINDOWNS_
+#ifdef _PF_WINDOWS_
 #include <WinSock2.h>
-#endif // _PF_WINDOWNS_
+#endif // _PF_WINDOWS_
 
 #include <sstream>
 #include <mysql.h>
