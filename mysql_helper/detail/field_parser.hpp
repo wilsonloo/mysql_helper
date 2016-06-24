@@ -1,7 +1,11 @@
 #ifndef EVL_ENGINE_DB_MYSQL_FIELD_PARSER_H_
 #define EVL_ENGINE_DB_MYSQL_FIELD_PARSER_H_
 
+#ifdef _PF_WINDOWNS_
 #include <WinSock2.h>
+#endif // _PF_WINDOWNS_
+
+#include <cstdio>
 #include <mysql.h>
 #include <boost/shared_ptr.hpp>
 #include "field_info.hpp"

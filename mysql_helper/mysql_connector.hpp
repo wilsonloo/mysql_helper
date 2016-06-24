@@ -1,7 +1,10 @@
 #ifndef EVL_ENGINE_MYSQL_CONNECTOR_H_
 #define EVL_ENGINE_MYSQL_CONNECTOR_H_
 
+#ifdef _PF_WINDOWNS_
 #include <WinSock2.h>
+#endif // _PF_WINDOWNS_
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -99,7 +102,7 @@ namespace evl
 			virtual ~MysqlCursor()
 			{}
 
-			void MysqlCursor::Execute(MysqlActionType action, const char* sql, const ExecuteResultHandlerType result_handler)
+			void Execute(MysqlActionType action, const char* sql, const ExecuteResultHandlerType result_handler)
 			{
 				BOOST_ASSERT(sql != NULL);
 
