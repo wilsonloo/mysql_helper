@@ -1,5 +1,5 @@
-#ifndef EVL_COMMON_DEF_TYPEDEF_H_
-#define EVL_COMMON_DEF_TYPEDEF_H_
+#ifndef EVL_MYSQL_HELPERCOMMON_DEF_TYPEDEF_H_
+#define EVL_MYSQL_HELPERCOMMON_DEF_TYPEDEF_H_
 
 #include <iostream>
 #include <boost/cstdint.hpp>
@@ -42,17 +42,6 @@ namespace evl
 
 #pragma pack(pop)
 
-#ifdef EVL_LIBRARY_SOURCE
-
-#define EVL_DLL_EXPORT extern "C" __declspec(dllexport)
-#define EVL_DLL_DESC __declspec(dllexport)
-
-#else
-
-#define EVL_DLL_EXPORT extern "C" __declspec(dllimport)
-#define EVL_DLL_DESC __declspec(dllimport)
-
-#endif
 	} // namespace def
 } // namespace evl
 
